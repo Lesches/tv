@@ -9,13 +9,15 @@ export class Address {
   country: string;
 
 // region Default Methods
-constructor(args?) {
-  this.streetNumber = args.streetNumber;
-  this.apartment = args.apartment;
-  this.streetName = args.streetName;
-  this.city = args.city;
-  this.province = args.province;
-  this.postalCode = args.postalCode;
-  this.country = args.country;
-}
+  constructor(args?) {
+    this.streetNumber = args.streetNumber;
+    this.apartment = args.apartment;
+    this.streetName = args.streetName;
+    this.city = args.city;
+    this.province = args.province;
+    this.postalCode = args.postalCode;
+    this.country = args.country;
+  }
+
 // endregion
+}
