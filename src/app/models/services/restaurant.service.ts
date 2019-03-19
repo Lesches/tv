@@ -14,7 +14,10 @@ export class RestaurantService {
     this.restaurants = [
       new Restaurant({
         name: 'Mottel\'s Kitchen',
-          location: [4937, 'Plamondon'],
+          location: new Address({
+            streetNumber: 4937,
+            streetName: 'Plamondon'
+          }),
         phone: '(514) 555-2019',
         website: 'https://www.teamviral.com',
         rating: 5,
@@ -22,13 +25,17 @@ export class RestaurantService {
       }),
       new Restaurant({
         name: 'Tav Cafe',
-       location: [6333,
-       'B',
-        'Decarie',
-        'Montreal',
-        'QC',
-        'H3W 3E1',
-        'Canada'],
+
+        location: new Address({
+         streetNumber: 6333,
+            apartment: 'B',
+           streetName: 'Decarie',
+                 city: 'Montreal',
+             province: 'QC',
+           postalCode: 'H3W 3E1',
+              country: 'Canada'
+        }),
+
         phone: '(514) 112-3581',
         website: 'http://cafetav.com/',
         rating: 3,

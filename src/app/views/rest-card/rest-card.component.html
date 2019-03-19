@@ -9,7 +9,11 @@
     </mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
-    <p><span *ngIf="restaurant.location">a: {{restaurant.location.streetNumber}}</span></p>
-    <p>Rated: {{restaurant.rating}}</p>
+    <span *ngIf="restaurant.location"><p>a: {{restaurant.location.streetNumber}}
+      <span *ngIf="restaurant.location.apartment">{{restaurant.location.apartment}}, </span> {{restaurant.location.streetName}}
+      <span *ngIf="restaurant.location.city"><br>{{restaurant.location.city}}, </span>
+    {{restaurant.location.province}} {{restaurant.location.postalCode}}
+      <span *ngIf="restaurant.location.country"><br>{{restaurant.location.country}}</span></p></span>
+  Rated: {{restaurant.rating}}
   </mat-card-content>
 </mat-card>

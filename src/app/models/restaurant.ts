@@ -17,6 +17,7 @@ export class Restaurant {
   // region Default Methods
   constructor(args?) {
     this.name = args.name;
+    this.location = args.location;
     this.website = args.website;
     this.phone = args.phone;
     this.rating = args.rating;
