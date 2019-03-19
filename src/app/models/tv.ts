@@ -3,7 +3,7 @@ import {Address} from './address';
 import {Review} from './review';
 // endregion
 
-export class Restaurant {
+export class Tv {
   // region Attributes
   name: string;
   website: string;

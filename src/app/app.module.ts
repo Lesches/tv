@@ -6,14 +6,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 
-import { RestCardComponent } from './views/rest-card/rest-card.component';
-import { RestaurantsComponent } from './views/restaurants/restaurants.component';
+import { TvCardComponent } from './views/tv-card/tv-card.component';
+import { TvComponent } from './views/tvs/tv.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RestCardComponent,
-    RestaurantsComponent
+    TvCardComponent,
+    TvComponent
   ],
   imports: [
     BrowserModule,

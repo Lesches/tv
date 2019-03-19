@@ -1,0 +1,19 @@
+<mat-card class="rest-card">
+  <mat-card-header>
+    <mat-card-title>{{tv.name | uppercase}}</mat-card-title>
+    <mat-card-subtitle *ngIf="tv.phone || tv.website">
+      <span *ngIf="tv.phone"> t: <a href="tel:{{tv.phone}}">{{tv.phone}}</a></span>
+
+      <span *ngIf="tv.website"> w: <a href="{{tv.website}}" target="_blank">{{tv.name | lowercase}}</a></span>
+
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <span *ngIf="tv.location">a: {{tv.location.streetNumber}}
+      <span *ngIf="tv.location.apartment">{{tv.location.apartment}}, </span> {{tv.location.streetName}}
+      <span *ngIf="tv.location.city"><br>{{tv.location.city}}, </span>
+    {{tv.location.province}} {{tv.location.postalCode}}
+      <span *ngIf="tv.location.country">{{tv.location.country}}</span><br><br></span>
+  Rated: {{tv.rating}}
+  </mat-card-content>
+</mat-card>

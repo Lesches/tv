@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Restaurant } from '../restaurant';
+import { Tv } from '../tv';
 import {Observable, of} from 'rxjs';
 import {Address} from '../address';
 
 @Injectable({
   providedIn: 'root'
 })
-export class RestaurantService {
-  restaurants: Restaurant[];
+export class TvService {
+  tvs: Tv[];
   address: Address[];
   constructor() {
     // TODO: Replace with API call
-    this.restaurants = [
-      new Restaurant({
+    this.tvs = [
+      new Tv({
         name: 'Mottel\'s Kitchen',
           location: new Address({
             streetNumber: 4937,
@@ -23,7 +23,7 @@ export class RestaurantService {
         rating: 5,
         avgMealPrice: 20
       }),
-      new Restaurant({
+      new Tv({
         name: 'Tav Cafe',
 
         location: new Address({
@@ -41,19 +41,19 @@ export class RestaurantService {
         rating: 3,
         avgMealPrice: 15
       }),
-      new Restaurant({
+      new Tv({
         name: 'Pizza Pita',
         phone: '(514) 234-1111',
         rating: 4,
         avgMealPrice: 18
       }),
-      new Restaurant({
+      new Tv({
         name: 'Chops',
         website: 'https://www.teamviral.com',
         rating: 5,
         avgMealPrice: 40
       }),
-      new Restaurant({
+      new Tv({
         name: 'Yakimono',
         phone: '(718) 781-0990',
         website: 'https://www.google.com',
@@ -64,8 +64,8 @@ export class RestaurantService {
   }
 
   // region Getters
-  getRestaurants(): Observable<Restaurant[]> {
-    return of(this.restaurants);
+  getShows(): Observable<Tv[]> {
+    return of(this.tvs);
   }
   // endregion
 }
