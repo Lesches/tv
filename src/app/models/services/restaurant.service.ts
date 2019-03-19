@@ -1,18 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Restaurant } from '../restaurant';
 import {Observable, of} from 'rxjs';
+import {Address} from '../address';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RestaurantService {
   restaurants: Restaurant[];
+  address: Address[];
   constructor() {
     // TODO: Replace with API call
     this.restaurants = [
       new Restaurant({
         name: 'Mottel\'s Kitchen',
-        address: '4937 Plamondon',
+          location: [4937, 'Plamondon'],
         phone: '(514) 555-2019',
         website: 'https://www.teamviral.com',
         rating: 5,
@@ -20,13 +22,13 @@ export class RestaurantService {
       }),
       new Restaurant({
         name: 'Tav Cafe',
-        streetNumber: 6333,
-        apartment: 'B',
-        streetName: 'Decarie',
-        city: 'Montreal',
-        province: 'QC',
-        postalCode: 'H3W 3E1',
-        country: 'Canada',
+       location: [6333,
+       'B',
+        'Decarie',
+        'Montreal',
+        'QC',
+        'H3W 3E1',
+        'Canada'],
         phone: '(514) 112-3581',
         website: 'http://cafetav.com/',
         rating: 3,
